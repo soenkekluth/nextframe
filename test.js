@@ -17,6 +17,5 @@ test('sequence', async t => {
 	const values = [1,2,3,4];
 	const increment = val => ++val;
 	const result = await sequence(values, increment);
-	console.log(result);
 	t.deepEqual(result, [2,3,4,5]);
 });
