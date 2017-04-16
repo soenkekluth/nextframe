@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/soenkekluth/nextframe#readme",
   "dependencies": {
+    "prs": "3.0.2",
     "raf": "3.3.0"
   },
   "devDependencies": {

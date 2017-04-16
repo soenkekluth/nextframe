@@ -1,8 +1,9 @@
 const raf = require('raf');
+const prs = require('prs');
 
-const nextFrame = (...args) => new Promise((resolve, reject) => raf(() => { resolve(...args); }));
+const nextFrame = (...args) => prs((resolve, reject) => raf(() => { resolve(...args); }));
 
-const delay = (ms = 0, ...args) => new Promise((resolve, reject) => setTimeout(() => {
+const delay = (ms = 0, ...args) => prs((resolve, reject) => setTimeout(() => {
   nextFrame().then(() => resolve(...args));
 }, ms));
 
