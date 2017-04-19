@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/soenkekluth/nextframe.svg?branch=master)](https://travis-ci.org/soenkekluth/nextframe)
+
 # nextframe
 Promise for requestAnimationFrame
 
