@@ -1,6 +1,6 @@
 {
   "name": "nextframe",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Promise for requestAnimationFrame",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
