@@ -1,5 +1,5 @@
 import test from 'ava';
-import nextFrame, {delay, sequence} from './index';
+import nextFrame, {delay, sequence} from './src/index';
 
 
 test('call next frame', async t => {

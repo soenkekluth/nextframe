@@ -2,17 +2,28 @@
   "name": "nextframe",
   "version": "1.0.3",
   "description": "Promise for requestAnimationFrame",
-  "main": "index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "ava --verbose"
+    "test": "ava --verbose",
+    "build": "yarn build:lib && yarn build:es",
+    "build:dist": "cross-env NODE_ENV=production BABEL_ENV=lib babel src -d lib",
+    "build:lib": "cross-env NODE_ENV=production BABEL_ENV=lib babel src -d lib",
+    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel src -d es"
   },
+  "files": [
+    "lib",
+    "src",
+    "es"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/soenkekluth/nextframe.git"
   },
   "keywords": [],
   "author": "Sönke Kluth <soenke.kluth@gmail.com> (http://soenkekluth.com/)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/soenkekluth/nextframe/issues"
   },
@@ -22,6 +33,13 @@
     "raf": "3.3.0"
   },
   "devDependencies": {
-    "ava": "0.19.1"
+    "ava": "0.19.1",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-es2015-tree-shaking": "1.0.1",
+    "cross-env": "4.0.0"
   }
 }

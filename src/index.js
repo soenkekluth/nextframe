@@ -3,11 +3,11 @@ const prs = require('prs');
 
 const nextFrame = (...args) => prs((resolve, reject) => raf(() => { resolve(...args); }));
 
-const delay = (ms = 0, ...args) => prs((resolve, reject) => setTimeout(() => {
+export const delay = (ms = 0, ...args) => prs((resolve, reject) => setTimeout(() => {
   nextFrame().then(() => resolve(...args));
 }, ms));
 
-const sequence = (collection, fn) => {
+export const sequence = (collection, fn) => {
   let chain = Promise.resolve();
   const values = [];
   collection.forEach(item => {
@@ -17,6 +17,5 @@ const sequence = (collection, fn) => {
   return chain.then(() => values);
 }
 
-nextFrame.delay = delay;
-nextFrame.sequence = sequence;
-module.exports = nextFrame;
+export {nextFrame as nextFrame};
+export default nextFrame;

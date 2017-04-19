@@ -1,4 +1,4 @@
-const nextFrame = require('./');
+const nextFrame = require('./src');
 
 nextFrame()
   .then(() => {
