@@ -1,16 +1,18 @@
 {
   "name": "nextframe",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Promise for requestAnimationFrame",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
   "main": "lib/index.js",
   "scripts": {
     "test": "ava --verbose",
+    "pretest": "yarn build",
     "build": "yarn build:lib && yarn build:es",
     "build:dist": "cross-env NODE_ENV=production BABEL_ENV=lib babel src -d lib",
     "build:lib": "cross-env NODE_ENV=production BABEL_ENV=lib babel src -d lib",
-    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel src -d es"
+    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel src -d es",
+    "prepublish": "yarn test"
   },
   "files": [
     "lib",
@@ -30,7 +32,7 @@
   "homepage": "https://github.com/soenkekluth/nextframe#readme",
   "dependencies": {
     "prs": "3.0.2",
-    "raf": "3.3.0"
+    "raf": "https://github.com/soenkekluth/raf"
   },
   "devDependencies": {
     "ava": "0.19.1",
