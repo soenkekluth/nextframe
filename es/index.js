@@ -6,11 +6,28 @@ export var nextFrame = function nextFrame() {
     args[_key] = arguments[_key];
   }
 
-  return prs(function (resolve, reject) {
+  return prs(function (resolve) {
     return raf(function () {
       resolve.apply(undefined, args);
     });
   });
+};
+
+export var nextFrames = function nextFrames(cb) {
+  if (typeof cb !== 'function') {
+    throw 'callback needs to be a function';
+  }
+  var f = true;
+  var frame = function frame() {
+    if (f) {
+      cb();
+      raf(frame);
+    }
+  };
+  raf(frame);
+  return function () {
+    f = false;
+  };
 };
 
 export var delay = function delay() {
@@ -29,7 +46,7 @@ export var delay = function delay() {
 };
 
 export var sequence = function sequence(collection, fn) {
-  var chain = Promise.resolve();
+  var chain = prs.resolve();
   var values = [];
   collection.forEach(function (item) {
     chain = chain.then(function () {

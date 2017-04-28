@@ -1,7 +1,7 @@
 {
   "name": "nextframe",
-  "version": "1.1.2",
-  "description": "Promise for requestAnimationFrame",
+  "version": "1.2.0",
+  "description": "Promise for requestAnimationFrame, plus delayed and sequenced frames",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
   "main": "lib/index.js",
@@ -9,6 +9,7 @@
     "test": "ava --verbose",
     "pretest": "yarn build",
     "build": "yarn build:lib && yarn build:es",
+    "example": "node example.js",
     "build:dist": "cross-env NODE_ENV=production BABEL_ENV=lib babel src -d lib",
     "build:lib": "cross-env NODE_ENV=production BABEL_ENV=lib babel src -d lib",
     "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel src -d es",
@@ -23,7 +24,17 @@
     "type": "git",
     "url": "git+https://github.com/soenkekluth/nextframe.git"
   },
-  "keywords": [],
+  "keywords": [
+    "requestAnimationFrame",
+    "Promise",
+    "resolve",
+    "delay",
+    "frame",
+    "next frame",
+    "sequence",
+    "performance",
+    "animation"
+  ],
   "author": "Sönke Kluth <soenke.kluth@gmail.com> (http://soenkekluth.com/)",
   "license": "MIT",
   "bugs": {
@@ -42,6 +53,8 @@
     "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-preset-es2015-tree-shaking": "1.0.1",
-    "cross-env": "4.0.0"
+    "babel-register": "6.24.1",
+    "cross-env": "4.0.0",
+    "performance-now": "2.1.0"
   }
 }

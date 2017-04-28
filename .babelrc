@@ -1,20 +1,21 @@
 {
   "presets": [
-    "es2015-tree-shaking"
+    "es2015-tree-shaking",
+  ],
+  "plugins": [
+    [
+      "transform-runtime", {
+        "helpers": true,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+      }
+    ]
   ],
   "env": {
     "lib": {
       "plugins": [
-        ["transform-es2015-modules-commonjs", { "loose": true }],
-        [
-          "transform-runtime", {
-            "helpers": true,
-            "polyfill": false,
-            "regenerator": true,
-            "moduleName": "babel-runtime"
-          }
-        ],
-        "add-module-exports"
+        ["transform-es2015-modules-commonjs", { "loose": true }]
       ]
     },
     "es": {
