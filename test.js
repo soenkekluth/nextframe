@@ -1,6 +1,7 @@
 import test from 'ava';
-import nextFrame, {nextFrames, delay, sequence } from './lib';
 import now from 'performance-now';
+
+import nextFrame, { nextFrames, delay, sequence } from './lib';
 
 test('call next frame with argument', async t => {
   const value = await nextFrame('check');
@@ -8,11 +9,11 @@ test('call next frame with argument', async t => {
 });
 
 test('delay 1s', async t => {
-	const start = now();
+  const start = now();
   const value = await delay(1000, 'check');
-	const duration = now() - start;
+  const duration = now() - start;
   t.is(value, 'check');
-	t.truthy(duration >= 1000 && duration <= 1100);
+  t.truthy(duration >= 1000 && duration <= 1100);
 });
 
 test('sequence', async t => {
@@ -23,16 +24,16 @@ test('sequence', async t => {
 });
 
 test('nextFrames loop', async t => {
-	const p = new Promise(resolve => {
-		let i = 0;
-		const cancel = nextFrames(()=>{
-			++i;
-			if(i >= 20){
-				cancel();
-				resolve(20);
-			}
-		})
-	})
+  const p = new Promise(resolve => {
+    let i = 0;
+    const cancel = nextFrames(() => {
+      ++i;
+      if (i >= 20) {
+        cancel();
+        resolve(20);
+      }
+    })
+  })
   const result = await p;
   t.is(result, 20);
 });
