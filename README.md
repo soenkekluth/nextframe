@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/soenkekluth/nextframe.svg?branch=master)](https://travis-ci.org/soenkekluth/nextframe)
 
 # nextframe
-Promise for requestAnimationFrame / plus features like nextFrames, sequence, delay, throttleFrames, waitFrames
+Promise for requestAnimationFrame / plus features like nextFrames, frameSequence, delay, throttleFrames, waitFrames
 
 
 ## usage
@@ -69,6 +69,8 @@ waitFrames(50).then((count) => {
 
 
 ## tests
+(*passing*)
+
 ```js
 import test from 'ava';
 import now from 'performance-now';
