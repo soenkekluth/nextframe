@@ -13,6 +13,24 @@ export var nextFrame = function nextFrame() {
   });
 };
 
+export var waitFrames = function waitFrames() {
+  for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+    args[_key2 - 1] = arguments[_key2];
+  }
+
+  var frame = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  return prs(function (resolve) {
+    var i = 0;
+    var count = function count() {
+      if (++i >= frame) {
+        return resolve.apply(undefined, [frame].concat(args));
+      }
+      raf(count);
+    };
+    raf(count);
+  });
+};
+
 export var nextFrames = function nextFrames(cb) {
   if (typeof cb !== 'function') {
     throw 'callback needs to be a function';
@@ -30,9 +48,32 @@ export var nextFrames = function nextFrames(cb) {
   };
 };
 
+export var throttleFrames = function throttleFrames(cb) {
+  var throttle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+  if (typeof cb !== 'function') {
+    throw 'callback needs to be a function';
+  }
+  var f = true;
+  var i = 0;
+  var frame = function frame() {
+    ++i;
+    if (f) {
+      if (throttle && i % throttle === 0) {
+        cb();
+      }
+      raf(frame);
+    }
+  };
+  raf(frame);
+  return function () {
+    f = false;
+  };
+};
+
 export var delay = function delay() {
-  for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-    args[_key2 - 1] = arguments[_key2];
+  for (var _len3 = arguments.length, args = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
+    args[_key3 - 1] = arguments[_key3];
   }
 
   var ms = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
@@ -59,5 +100,7 @@ export var sequence = function sequence(collection, fn) {
     return values;
   });
 };
+
+export { sequence as frameSequence };
 
 export default nextFrame;

@@ -6,44 +6,64 @@ Promise for requestAnimationFrame
 
 
 ```js
-import test from 'ava';
-import now from 'performance-now';
+const { nextFrame, nextFrames, sequence, delay, throttleFrames, waitFrames } = require('./lib');
+const now = require('performance-now');
 
-import nextFrame, {nextFrames, delay, sequence } from './lib';
+const increment = val => ++val;
 
-test('call next frame with argument', async t => {
-  const value = await nextFrame('check');
-  t.is(value, 'check');
+const sequenceValues = [1, 2, 3, 4];
+let frameCount = 0;
+let throttleCount = 0;
+
+const start = now();
+
+/****************************
+		nextFrame
+****************************/
+nextFrame()
+  .then(() => {
+    console.log('next frame');
+  })
+
+/****************************
+		delay
+****************************/
+delay(1000).then(() => {
+  console.log('delayed ' + (now() - start) + 'ms');
 });
 
-test('delay 1s', async t => {
-	const start = now();
-  const value = await delay(1000, 'check');
-	const duration = now() - start;
-  t.is(value, 'check');
-	t.truthy(duration >= 1000 && duration <= 1100);
+/****************************
+		sequence / frameSequence
+****************************/
+sequence(sequenceValues, increment)
+  .then(result => console.log(result));
+
+/****************************
+		nextFrames
+****************************/
+const cancelNext = nextFrames(() => {
+  console.log('frame', ++frameCount);
+  if (frameCount >= 100) {
+    cancelNext();
+  }
 });
 
-test('sequence', async t => {
-  const values = [1, 2, 3, 4];
-  const increment = val => ++val;
-  const result = await sequence(values, increment);
-  t.deepEqual(result, [2, 3, 4, 5]);
-});
+/****************************
+		throttleFrames
+****************************/
+const cancelThrottle = throttleFrames(() => {
+  console.log('throttle', ++throttleCount);
+  if (throttleCount >= 10) {
+    cancelThrottle();
+  }
+}, 10);
 
-test('nextFrames loop', async t => {
-	const p = new Promise(resolve => {
-		let i = 0;
-		const cancel = nextFrames(()=>{
-			++i;
-			if(i >= 20){
-				cancel();
-				resolve(20);
-			}
-		})
-	})
-  const result = await p;
-  t.is(result, 20);
-});
+/****************************
+		waitFrames
+****************************/
+waitFrames(50).then((count) => {
+  console.log(count + ' frames waited');
+})
+
 
 ```

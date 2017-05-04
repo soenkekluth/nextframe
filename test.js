@@ -1,7 +1,7 @@
 import test from 'ava';
 import now from 'performance-now';
 
-import nextFrame, { nextFrames, delay, sequence } from './lib';
+import nextFrame, { nextFrames, delay, sequence, waitFrames, throttleFrames } from './lib';
 
 test('call next frame with argument', async t => {
   const value = await nextFrame('check');
@@ -36,4 +36,35 @@ test('nextFrames loop', async t => {
   })
   const result = await p;
   t.is(result, 20);
+});
+
+test('wait 50 frames', async t => {
+  let i = 0;
+  const cancel = nextFrames(() => ++i);
+
+  const result = await waitFrames(50);
+
+  cancel();
+  t.is(result, 50);
+  t.is(i, 50);
+});
+
+test('throttle frames', async t => {
+  let i = 0;
+  let throttleCount = 0;
+
+  const p = new Promise(resolve => {
+    const cancel = nextFrames(() => ++i);
+
+    const cancelThrottle = throttleFrames(() => {
+      if (++throttleCount >= 10) {
+        cancelThrottle();
+        cancel();
+        resolve(throttleCount)
+      }
+    }, 10);
+  });
+  const result = await p;
+  t.is(result, 10);
+  t.is(i, 100);
 });
