@@ -1,6 +1,6 @@
 {
   "name": "nextframe",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Promise for requestAnimationFrame, plus delayed and sequenced frames",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",

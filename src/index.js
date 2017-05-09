@@ -14,7 +14,7 @@ export const waitFrames = (frame = 1, ...args) => prs((resolve) => {
   raf(count);
 });
 
-export const nextFrames = (cb) => {
+export const loop = (cb) => {
   if (typeof cb !== 'function') {
     throw 'callback needs to be a function';
   }
@@ -67,5 +67,9 @@ export const sequence = (collection, fn) => {
 }
 
 export { sequence as frameSequence }
-
+export { waitFrames as wait }
+export { loop as nextFrames }
+export { loop as onEnterFrame }
+export { throttleFrames as throttle }
+export { nextFrame as frame }
 export default nextFrame;

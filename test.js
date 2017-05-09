@@ -1,7 +1,7 @@
 import test from 'ava';
 import now from 'performance-now';
 
-import nextFrame, { nextFrames, delay, sequence, waitFrames, throttleFrames } from './lib';
+import nextFrame, { loop, delay, sequence, waitFrames, throttleFrames } from './lib';
 
 test('call next frame with argument', async t => {
   const value = await nextFrame('check');
@@ -23,10 +23,10 @@ test('sequence', async t => {
   t.deepEqual(result, [2, 3, 4, 5]);
 });
 
-test('nextFrames loop', async t => {
+test('loop', async t => {
   const p = new Promise(resolve => {
     let i = 0;
-    const cancel = nextFrames(() => {
+    const cancel = loop(() => {
       ++i;
       if (i >= 20) {
         cancel();
@@ -40,7 +40,7 @@ test('nextFrames loop', async t => {
 
 test('wait 50 frames', async t => {
   let i = 0;
-  const cancel = nextFrames(() => ++i);
+  const cancel = loop(() => ++i);
 
   const result = await waitFrames(50);
 
@@ -54,7 +54,7 @@ test('throttle frames', async t => {
   let throttleCount = 0;
 
   const p = new Promise(resolve => {
-    const cancel = nextFrames(() => ++i);
+    const cancel = loop(() => ++i);
 
     const cancelThrottle = throttleFrames(() => {
       if (++throttleCount >= 10) {

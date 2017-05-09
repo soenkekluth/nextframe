@@ -10,7 +10,7 @@ let throttleCount = 0;
 const start = now();
 
 /****************************
-		nextFrame
+		nextFrame / frame
 ****************************/
 nextFrame()
   .then(() => {
@@ -31,17 +31,17 @@ sequence(sequenceValues, increment)
   .then(result => console.log(result));
 
 /****************************
-		nextFrames
+		loop / nextFrames / onEnterFrame
 ****************************/
-const cancelNext = nextFrames(() => {
+const cancelLoop = loop(() => {
   console.log('frame', ++frameCount);
   if (frameCount >= 100) {
-    cancelNext();
+    cancelLoop();
   }
 });
 
 /****************************
-		throttleFrames
+		throttleFrames / throttle
 ****************************/
 const cancelThrottle = throttleFrames(() => {
   console.log('throttle', ++throttleCount);
@@ -51,7 +51,7 @@ const cancelThrottle = throttleFrames(() => {
 }, 10);
 
 /****************************
-		waitFrames
+		waitFrames / wait
 ****************************/
 waitFrames(50).then((count) => {
   console.log(count + ' frames waited');

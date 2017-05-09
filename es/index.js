@@ -31,7 +31,7 @@ export var waitFrames = function waitFrames() {
   });
 };
 
-export var nextFrames = function nextFrames(cb) {
+export var loop = function loop(cb) {
   if (typeof cb !== 'function') {
     throw 'callback needs to be a function';
   }
@@ -102,5 +102,9 @@ export var sequence = function sequence(collection, fn) {
 };
 
 export { sequence as frameSequence };
-
+export { waitFrames as wait };
+export { loop as nextFrames };
+export { loop as onEnterFrame };
+export { throttleFrames as throttle };
+export { nextFrame as frame };
 export default nextFrame;
