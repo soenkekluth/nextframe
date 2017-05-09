@@ -1,4 +1,4 @@
-const { nextFrame, nextFrames, sequence, delay, throttleFrames, waitFrames } = require('./lib');
+const { nextFrame, loop, sequence, delay, throttleFrames, waitFrames } = require('./lib');
 const now = require('performance-now');
 
 const increment = val => ++val;
