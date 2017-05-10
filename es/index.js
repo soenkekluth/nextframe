@@ -1,12 +1,11 @@
 var raf = require('raf');
-var prs = require('prs');
 
 export var nextFrame = function nextFrame() {
   for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
     args[_key] = arguments[_key];
   }
 
-  return prs(function (resolve) {
+  return new Promise(function (resolve) {
     return raf(function () {
       resolve.apply(undefined, args);
     });
@@ -19,7 +18,7 @@ export var waitFrames = function waitFrames() {
   }
 
   var frame = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-  return prs(function (resolve) {
+  return new Promise(function (resolve) {
     var i = 0;
     var count = function count() {
       if (++i >= frame) {
@@ -77,7 +76,7 @@ export var delay = function delay() {
   }
 
   var ms = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-  return prs(function (resolve, reject) {
+  return new Promise(function (resolve, reject) {
     return setTimeout(function () {
       nextFrame().then(function () {
         return resolve.apply(undefined, args);
@@ -87,7 +86,7 @@ export var delay = function delay() {
 };
 
 export var sequence = function sequence(collection, fn) {
-  var chain = prs.resolve();
+  var chain = Promise.resolve();
   var values = [];
   collection.forEach(function (item) {
     chain = chain.then(function () {

@@ -1,9 +1,8 @@
 const raf = require('raf');
-const prs = require('prs');
 
-export const nextFrame = (...args) => prs(resolve => raf(() => { resolve(...args); }));
+export const nextFrame = (...args) => new Promise(resolve => raf(() => { resolve(...args); }));
 
-export const waitFrames = (frame = 1, ...args) => prs((resolve) => {
+export const waitFrames = (frame = 1, ...args) => new Promise((resolve) => {
   let i = 0;
   const count = () => {
     if (++i >= frame) {
@@ -52,12 +51,13 @@ export const throttleFrames = (cb, throttle = 0) => {
   };
 };
 
-export const delay = (ms = 0, ...args) => prs((resolve, reject) => setTimeout(() => {
-  nextFrame().then(() => resolve(...args));
+export const delay = (ms = 0, ...args) => new Promise((resolve, reject) => setTimeout(() => {
+  nextFrame()
+  	.then(() => resolve(...args));
 }, ms));
 
 export const sequence = (collection, fn) => {
-  let chain = prs.resolve();
+  let chain = Promise.resolve();
   const values = [];
   collection.forEach(item => {
     chain = chain

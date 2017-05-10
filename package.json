@@ -1,6 +1,6 @@
 {
   "name": "nextframe",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Promise for requestAnimationFrame, plus delayed and sequenced frames",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
@@ -42,7 +42,6 @@
   },
   "homepage": "https://github.com/soenkekluth/nextframe#readme",
   "dependencies": {
-    "prs": "^3.1.0",
     "raf": "^3.3.2"
   },
   "devDependencies": {

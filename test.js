@@ -8,7 +8,7 @@ test('call next frame with argument', async t => {
   t.is(value, 'check');
 });
 
-test('delay 1s', async t => {
+test('delay 1s with args', async t => {
   const start = now();
   const value = await delay(1000, 'check');
   const duration = now() - start;
