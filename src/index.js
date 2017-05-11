@@ -13,6 +13,17 @@ export const waitFrames = (frame = 1, ...args) => new Promise((resolve) => {
   raf(count);
 });
 
+export const when = (fn, ...args) => {
+  return nextFrame()
+    .then(() => {
+      const result = fn(...args);
+      if (result === true) {
+        return result;
+      }
+      return when(fn, result);
+    });
+};
+
 export const loop = (cb) => {
   if (typeof cb !== 'function') {
     throw 'callback needs to be a function';
@@ -53,7 +64,7 @@ export const throttleFrames = (cb, throttle = 0) => {
 
 export const delay = (ms = 0, ...args) => new Promise((resolve, reject) => setTimeout(() => {
   nextFrame()
-  	.then(() => resolve(...args));
+    .then(() => resolve(...args));
 }, ms));
 
 export const sequence = (collection, fn) => {

@@ -1,11 +1,23 @@
 import test from 'ava';
 import now from 'performance-now';
 
-import nextFrame, { loop, delay, sequence, waitFrames, throttleFrames } from './lib';
+import nextFrame, { loop, delay, when, sequence, wait, throttle } from './lib';
 
 test('call next frame with argument', async t => {
   const value = await nextFrame('check');
   t.is(value, 'check');
+});
+
+test('resolve when fn return true value.', async t => {
+
+  const value = await when((val = 10)=>{
+  	--val;
+  	if(val > 0){
+  		return val;
+  	}
+  	return true;
+  });
+  t.is(value, true);
 });
 
 test('delay 1s with args', async t => {
@@ -42,7 +54,7 @@ test('wait 50 frames', async t => {
   let i = 0;
   const cancel = loop(() => ++i);
 
-  const result = await waitFrames(50);
+  const result = await wait(50);
 
   cancel();
   t.is(result, 50);
@@ -56,7 +68,7 @@ test('throttle frames', async t => {
   const p = new Promise(resolve => {
     const cancel = loop(() => ++i);
 
-    const cancelThrottle = throttleFrames(() => {
+    const cancelThrottle = throttle(() => {
       if (++throttleCount >= 10) {
         cancelThrottle();
         cancel();

@@ -30,6 +30,20 @@ export var waitFrames = function waitFrames() {
   });
 };
 
+export var when = function when(fn) {
+  for (var _len3 = arguments.length, args = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
+    args[_key3 - 1] = arguments[_key3];
+  }
+
+  return nextFrame().then(function () {
+    var result = fn.apply(undefined, args);
+    if (result === true) {
+      return result;
+    }
+    return when(fn, result);
+  });
+};
+
 export var loop = function loop(cb) {
   if (typeof cb !== 'function') {
     throw 'callback needs to be a function';
@@ -71,8 +85,8 @@ export var throttleFrames = function throttleFrames(cb) {
 };
 
 export var delay = function delay() {
-  for (var _len3 = arguments.length, args = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
-    args[_key3 - 1] = arguments[_key3];
+  for (var _len4 = arguments.length, args = Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
+    args[_key4 - 1] = arguments[_key4];
   }
 
   var ms = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
