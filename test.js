@@ -1,24 +1,32 @@
 import test from 'ava';
 import now from 'performance-now';
 
-import nextFrame, { loop, delay, when, sequence, wait, throttle } from './lib';
+import nextFrame, { loop, delay, when, until, sequence, wait, throttle } from './lib';
 
 test('call next frame with argument', async t => {
   const value = await nextFrame('check');
   t.is(value, 'check');
 });
 
-test('resolve when fn return true value.', async t => {
+test('resolve when fn returns a truthy value.', async t => {
 
-  const value = await when((val = 10)=>{
-  	--val;
-  	if(val > 0){
-  		return val;
-  	}
-  	return true;
-  });
+	let x = 0;
+	wait(10).then(()=> x = 1);
+
+  const value = await when(() => x >= 1);
   t.is(value, true);
 });
+
+
+test('until fn returns a truthy value do not resolve.', async t => {
+
+	let x = 0;
+	wait(10).then(()=> x = 1);
+
+  const value = await until(() => x >= 1);
+  t.is(value, false);
+});
+
 
 test('delay 1s with args', async t => {
   const start = now();

@@ -1,5 +1,10 @@
 var raf = require('raf');
 
+/**
+ * create a Promise that resolves in the next Animationframe
+ * @param  {...} args - optional values that would be the params of the Promises resolve
+ * @return {Promise} which will resolve in the next Animationframe
+ */
 export var nextFrame = function nextFrame() {
   for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
     args[_key] = arguments[_key];
@@ -12,6 +17,12 @@ export var nextFrame = function nextFrame() {
   });
 };
 
+/**
+ * waiting x frames before the Promise will resolve
+ * @param  {Number}    frame - the number of frames the Promise waits before resolving
+ * @param  {...} args 	- optional values that would be the params of the Promises resolve
+ * @return {Promise} which will resolve after the waiting frames
+ */
 export var waitFrames = function waitFrames() {
   for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
     args[_key2 - 1] = arguments[_key2];
@@ -30,6 +41,12 @@ export var waitFrames = function waitFrames() {
   });
 };
 
+/**
+ * [description]
+ * @param  {Function}  fn   [description]
+ * @param  {...[type]} args [description]
+ * @return {[type]}         [description]
+ */
 export var when = function when(fn) {
   for (var _len3 = arguments.length, args = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
     args[_key3 - 1] = arguments[_key3];
@@ -37,10 +54,24 @@ export var when = function when(fn) {
 
   return nextFrame().then(function () {
     var result = fn.apply(undefined, args);
-    if (result === true) {
-      return result;
+    if (result) {
+      return args && args.length > 1 ? args : result;
     }
-    return when(fn, result);
+    return when.apply(undefined, [fn].concat(args));
+  });
+};
+
+export var until = function until(fn) {
+  for (var _len4 = arguments.length, args = Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
+    args[_key4 - 1] = arguments[_key4];
+  }
+
+  return nextFrame().then(function () {
+    var result = fn.apply(undefined, args);
+    if (result) {
+      return until.apply(undefined, [fn].concat(args));
+    }
+    return args && args.length > 1 ? args : result;
   });
 };
 
@@ -85,8 +116,8 @@ export var throttleFrames = function throttleFrames(cb) {
 };
 
 export var delay = function delay() {
-  for (var _len4 = arguments.length, args = Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
-    args[_key4 - 1] = arguments[_key4];
+  for (var _len5 = arguments.length, args = Array(_len5 > 1 ? _len5 - 1 : 0), _key5 = 1; _key5 < _len5; _key5++) {
+    args[_key5 - 1] = arguments[_key5];
   }
 
   var ms = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
