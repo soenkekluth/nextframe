@@ -42,10 +42,10 @@ export var waitFrames = function waitFrames() {
 };
 
 /**
- * [description]
- * @param  {Function}  fn   [description]
- * @param  {...[type]} args [description]
- * @return {[type]}         [description]
+ * resolve when fn returns a truthy value.
+ * @param  {Function}  fn   a function that will be called every frame to check for changes
+ * @param  {...[type]} args  	- optional values that would be the params of the Promises resolve
+ * @return {Promise} which will resolve after the waiting frames
  */
 export var when = function when(fn) {
   for (var _len3 = arguments.length, args = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
@@ -61,6 +61,12 @@ export var when = function when(fn) {
   });
 };
 
+/**
+ * until fn returns a truthy value do not resolve.
+ * @param  {Function}  fn   a function that will be called every frame to check for changes
+ * @param  {...[type]} args  	- optional values that would be the params of the Promises resolve
+ * @return {Promise} which will resolve after the waiting frames
+ */
 export var until = function until(fn) {
   for (var _len4 = arguments.length, args = Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
     args[_key4 - 1] = arguments[_key4];
@@ -75,6 +81,11 @@ export var until = function until(fn) {
   });
 };
 
+/**
+ * create an animationframe loop that calls a function (callback) in every frame
+ * @param  {Function} cb - gets called in every frame - for rendering mostly
+ * @return {Function}  a function which cancels the initialed loop by calling it
+ */
 export var loop = function loop(cb) {
   if (typeof cb !== 'function') {
     throw 'callback needs to be a function';
@@ -92,6 +103,12 @@ export var loop = function loop(cb) {
   };
 };
 
+/**
+ * create a throttled animationframe loop that calls a function (callback) in every specified
+ * @param  {Function} cb        gets called in every specified frame
+ * @param  {Number}   throttle in wich interval cb is called
+ * @return {Function}  a function which cancels the initialed loop by calling it
+ */
 export var throttleFrames = function throttleFrames(cb) {
   var throttle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 
@@ -115,6 +132,12 @@ export var throttleFrames = function throttleFrames(cb) {
   };
 };
 
+/**
+ * delays the call to nextFrame with setTimeout
+ * @param  {Number}    ms    delay in ms
+ * @param  {...} args 	- optional values that would be the params of the Promises resolve
+ * @return {Promise} which will resolve after the delayed animationframe
+ */
 export var delay = function delay() {
   for (var _len5 = arguments.length, args = Array(_len5 > 1 ? _len5 - 1 : 0), _key5 = 1; _key5 < _len5; _key5++) {
     args[_key5 - 1] = arguments[_key5];
@@ -130,6 +153,12 @@ export var delay = function delay() {
   });
 };
 
+/**
+ * call a function sequencely every next frame on every iterating position of an array
+ * @param  {Array}   collection keeps all values that will be used as the argument for the function
+ * @param  {Function} fn         will be called with array values as aruments
+ * @return {Promise} which will resolve after the sequence
+ */
 export var sequence = function sequence(collection, fn) {
   var chain = Promise.resolve();
   var values = [];
