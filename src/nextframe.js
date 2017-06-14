@@ -1,4 +1,4 @@
-const raf = require('raf');
+import raf from 'raf';
 
 /**
  * create a Promise that resolves in the next Animationframe

@@ -1,11 +1,11 @@
-var raf = require('raf');
+import raf from 'raf';
 
 /**
  * create a Promise that resolves in the next Animationframe
  * @param  {...} args - optional values that would be the params of the Promises resolve
  * @return {Promise} which will resolve in the next Animationframe
  */
-export var nextFrame = function nextFrame() {
+var nextFrame = function nextFrame() {
   for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
     args[_key] = arguments[_key];
   }
@@ -23,7 +23,7 @@ export var nextFrame = function nextFrame() {
  * @param  {...} args 	- optional values that would be the params of the Promises resolve
  * @return {Promise} which will resolve after the waiting frames
  */
-export var waitFrames = function waitFrames() {
+var waitFrames = function waitFrames() {
   for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
     args[_key2 - 1] = arguments[_key2];
   }
@@ -47,7 +47,7 @@ export var waitFrames = function waitFrames() {
  * @param  {...[type]} args  	- optional values that would be the params of the Promises resolve
  * @return {Promise} which will resolve after the waiting frames
  */
-export var when = function when(fn) {
+var when = function when(fn) {
   for (var _len3 = arguments.length, args = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
     args[_key3 - 1] = arguments[_key3];
   }
@@ -67,7 +67,7 @@ export var when = function when(fn) {
  * @param  {...[type]} args  	- optional values that would be the params of the Promises resolve
  * @return {Promise} which will resolve after the waiting frames
  */
-export var until = function until(fn) {
+var until = function until(fn) {
   for (var _len4 = arguments.length, args = Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
     args[_key4 - 1] = arguments[_key4];
   }
@@ -86,7 +86,7 @@ export var until = function until(fn) {
  * @param  {Function} cb - gets called in every frame - for rendering mostly
  * @return {Function}  a function which cancels the initialed loop by calling it
  */
-export var loop = function loop(cb) {
+var loop = function loop(cb) {
   if (typeof cb !== 'function') {
     throw 'callback needs to be a function';
   }
@@ -109,7 +109,7 @@ export var loop = function loop(cb) {
  * @param  {Number}   throttle in wich interval cb is called
  * @return {Function}  a function which cancels the initialed loop by calling it
  */
-export var throttleFrames = function throttleFrames(cb) {
+var throttleFrames = function throttleFrames(cb) {
   var throttle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 
   if (typeof cb !== 'function') {
@@ -138,7 +138,7 @@ export var throttleFrames = function throttleFrames(cb) {
  * @param  {...} args 	- optional values that would be the params of the Promises resolve
  * @return {Promise} which will resolve after the delayed animationframe
  */
-export var delay = function delay() {
+var delay = function delay() {
   for (var _len5 = arguments.length, args = Array(_len5 > 1 ? _len5 - 1 : 0), _key5 = 1; _key5 < _len5; _key5++) {
     args[_key5 - 1] = arguments[_key5];
   }
@@ -159,7 +159,7 @@ export var delay = function delay() {
  * @param  {Function} fn         will be called with array values as aruments
  * @return {Promise} which will resolve after the sequence
  */
-export var sequence = function sequence(collection, fn) {
+var sequence = function sequence(collection, fn) {
   var chain = Promise.resolve();
   var values = [];
   collection.forEach(function (item) {
@@ -174,10 +174,5 @@ export var sequence = function sequence(collection, fn) {
   });
 };
 
-export { sequence as frameSequence };
-export { waitFrames as wait };
-export { loop as nextFrames };
-export { loop as onEnterFrame };
-export { throttleFrames as throttle };
-export { nextFrame as frame };
-export default nextFrame;
+export { nextFrame, waitFrames, when, until, loop, throttleFrames, delay, sequence, sequence as frameSequence, waitFrames as wait, loop as nextFrames, loop as onEnterFrame, throttleFrames as throttle, nextFrame as frame };export default nextFrame;
+//# sourceMappingURL=nextframe.js.map

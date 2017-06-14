@@ -1,18 +1,23 @@
 {
   "name": "nextframe",
-  "version": "1.4.4",
+  "version": "1.5.0",
   "description": "Promise for requestAnimationFrame, plus delayed and sequenced frames",
-  "module": "es/index.js",
-  "jsnext:main": "es/index.js",
-  "main": "lib/index.js",
+  "amdName": "nextframe",
+  "module": "es/nextframe.js",
+  "jsnext:main": "es/nextframe.js",
+  "main": "lib/nextframe.js",
+  "browser": "dist/nextframe.js",
   "scripts": {
     "test": "ava --verbose",
     "pretest": "yarn build",
-    "build": "yarn build:lib && yarn build:es",
+    "build": "yarn build:umd && yarn build:es && yarn build:browser",
     "example": "node example.js",
-    "build:dist": "cross-env NODE_ENV=production BABEL_ENV=lib babel src -d lib",
-    "build:lib": "cross-env NODE_ENV=production BABEL_ENV=lib babel src -d lib",
-    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel src -d es",
+    "build:es": "cross-env NODE_ENV=production FORMAT=es rollup -c",
+    "build:umd": "cross-env NODE_ENV=production FORMAT=umd rollup -c",
+    "build:browser": "cross-env NODE_ENV=production FORMAT=iife rollup -c",
+    "dev": "rollup -c --watch",
+    "reload": "livereload 'build/'",
+    "watch": "cross-env FORMAT=iife NODE_ENV=development run-p reload dev",
     "prepublish": "yarn test"
   },
   "files": [
@@ -33,6 +38,9 @@
     "next frame",
     "sequence",
     "performance",
+    "jank",
+    "jankfree",
+    "jank free",
     "animation"
   ],
   "author": "Sönke Kluth <soenke.kluth@gmail.com> (http://soenkekluth.com/)",
@@ -44,16 +52,23 @@
   "dependencies": {
     "raf": "^3.3.2"
   },
+  "peerDependencies": {
+    "raf": ">= 3.3.2"
+  },
   "devDependencies": {
     "ava": "0.19.1",
-    "babel-cli": "6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-add-module-exports": "0.2.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
-    "babel-plugin-transform-runtime": "6.23.0",
-    "babel-preset-es2015-tree-shaking": "1.0.1",
-    "babel-register": "6.24.1",
-    "cross-env": "^5.0.1",
-    "performance-now": "2.1.0"
+    "babel-core": "6.25.0",
+    "babel-plugin-external-helpers": "6.22.0",
+    "cross-env": "5.0.1",
+    "performance-now": "2.1.0",
+    "rollup": "0.43.0",
+    "rollup-plugin-babel": "2.7.1",
+    "rollup-plugin-commonjs": "8.0.2",
+    "rollup-plugin-eslint": "3.0.0",
+    "rollup-plugin-memory": "2.0.0",
+    "rollup-plugin-node-resolve": "3.0.0",
+    "rollup-plugin-replace": "1.1.1",
+    "rollup-plugin-uglify": "2.0.1",
+    "rollup-watch": "4.0.0"
   }
 }

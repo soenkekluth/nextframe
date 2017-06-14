@@ -1,7 +1,7 @@
 import test from 'ava';
 import now from 'performance-now';
 
-import nextFrame, { loop, delay, when, until, sequence, wait, throttle } from './lib';
+import nextFrame, { loop, delay, when, until, sequence, wait, throttle } from './lib/nextframe';
 
 test('call next frame with argument', async t => {
   const value = await nextFrame('check');
