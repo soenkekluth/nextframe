@@ -10,7 +10,7 @@ import uglify from 'rollup-plugin-uglify';
 
 const DEV = process.env.NODE_ENV === 'development';
 
-let format = process.env.FORMAT || 'umd';
+let format = process.env.FORMAT || 'cjs';
 let pkg = JSON.parse(fs.readFileSync('./package.json'));
 let external = format === 'iife' ? [] : Object.keys(pkg.peerDependencies || {}).concat(Object.keys(pkg.dependencies || {}));
 let dest = pkg.main;
@@ -24,7 +24,7 @@ switch(format) {
     dest = pkg.browser;
   break;
 
-  case 'umd':
+  case 'cjs':
     dest = pkg.main;
   break;
 

@@ -1,6 +1,6 @@
 {
   "name": "nextframe",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Promise for requestAnimationFrame, plus delayed and sequenced frames",
   "amdName": "nextframe",
   "module": "es/nextframe.js",
@@ -10,10 +10,11 @@
   "scripts": {
     "test": "ava --verbose",
     "pretest": "yarn build",
-    "build": "yarn build:umd && yarn build:es && yarn build:browser",
+    "build": "yarn build:cjs && yarn build:es && yarn build:browser",
     "example": "node example.js",
     "build:es": "cross-env NODE_ENV=production FORMAT=es rollup -c",
     "build:umd": "cross-env NODE_ENV=production FORMAT=umd rollup -c",
+    "build:cjs": "cross-env NODE_ENV=production FORMAT=cjs rollup -c",
     "build:browser": "cross-env NODE_ENV=production FORMAT=iife rollup -c",
     "dev": "rollup -c --watch",
     "reload": "livereload 'build/'",
