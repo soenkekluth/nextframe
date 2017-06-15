@@ -4,7 +4,7 @@ import babel from 'rollup-plugin-babel';
 // import eslint from 'rollup-plugin-eslint';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import replace from 'rollup-plugin-replace';
+// import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
 // import memory from 'rollup-plugin-memory';
 
@@ -15,18 +15,18 @@ let pkg = JSON.parse(fs.readFileSync('./package.json'));
 let external = format === 'iife' ? [] : Object.keys(pkg.peerDependencies || {}).concat(Object.keys(pkg.dependencies || {}));
 let dest = pkg.main;
 
-switch(format) {
+switch (format) {
   case 'es':
     dest = pkg.module;
-  break;
+    break;
 
   case 'iife':
     dest = pkg.browser;
-  break;
+    break;
 
   case 'cjs':
     dest = pkg.main;
-  break;
+    break;
 
   default:
     break;
@@ -40,22 +40,24 @@ export default {
   external,
   moduleName: pkg.amdName,
   useStrict: false,
-  exports: format==='es' ? null : 'named',
+  exports: format === 'es' ? null : 'named',
   plugins: [
     // format==='umd' && memory({
     //   path: 'src/device.js',
     //   contents: "export { default } from './device';"
     // }),
-    babel({
-      exclude: 'node_modules/**',
-    }),
+
     resolve({
-      jsnext: true,  // Default: false
-      main: true,  // Default: true
-      browser: true,  // Default: false
+      jsnext: false, // Default: false
+      main: true, // Default: true
+      browser: false, // Default: false
       preferBuiltins: false,
       // browser: true
       // skip: format === 'iife' ? null : external
+    }),
+
+    babel({
+      exclude: 'node_modules/**',
     }),
     // eslint({
     //   include: [
@@ -66,10 +68,10 @@ export default {
       include: ['node_modules/**', 'src/**/*.js']
     }),
 
-    replace({
-      exclude: 'node_modules/**',
-      ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
-    }),
+    // replace({
+    //   exclude: 'node_modules/**',
+    //   ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+    // }),
     ((format === 'iife' && !DEV) && uglify()),
   ].filter(Boolean)
 };
