@@ -1,18 +1,4 @@
-/*!
-  * nextframe v1.7.1
-  * https://github.com/[object Object]
-  *
-  * Copyright (c) 2017-2017 undefined
-  * Released under the MIT license
-  *
-  * Date: 2017-10-10T04:54:19.712Z
-  */
- 
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.nextframe = {})));
-}(this, (function (exports) {
+Object.defineProperty(exports, '__esModule', { value: true });
 
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -60,7 +46,7 @@ var performanceNow = createCommonjsModule(function (module) {
 
 }).call(commonjsGlobal);
 
-
+//# sourceMappingURL=performance-now.js.map
 });
 
 var root = typeof window === 'undefined' ? commonjsGlobal : window;
@@ -141,11 +127,6 @@ var polyfill = function(object) {
 raf_1.cancel = cancel;
 raf_1.polyfill = polyfill;
 
-/**
- * create a Promise that resolves in the next Animationframe
- * @param  {...} args - optional values that would be the params of the Promises resolve
- * @return {Promise} - which will resolve in the next Animationframe
- */
 function frame$1() {
   for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
     args[_key] = arguments[_key];
@@ -158,12 +139,6 @@ function frame$1() {
   });
 }
 
-/**
- * delays the call to nextFrame with setTimeout
- * @param  {Number} ms - delay in ms
- * @param  {...} args - optional values that would be the params of the Promises resolve
- * @return {Promise} - which will resolve after the delayed animationframe
- */
 function delay() {
   for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     args[_key - 1] = arguments[_key];
@@ -180,11 +155,6 @@ function delay() {
   });
 }
 
-/**
- * create an animationframe loop that calls a function (callback) in every frame
- * @param  {Function} cb - gets called in every frame - for rendering mostly
- * @return {Function} - a function which cancels the initialed loop by calling it
- */
 function loop(cb) {
   if (typeof cb !== 'function') {
     throw new Error('callback needs to be a function');
@@ -203,11 +173,6 @@ function loop(cb) {
   };
 }
 
-/**
- * create a Promise that resolves in the next Animationframe
- * @param  {...} args - optional values that would be the params of the Promises resolve
- * @return {Promise} - which will resolve in the next Animationframe
- */
 function nextFrame() {
   for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
     args[_key] = arguments[_key];
@@ -220,12 +185,6 @@ function nextFrame() {
   });
 }
 
-/**
- * call a function sequencely every next frame on every iterating position of an array
- * @param  {Array} collection - keeps all values that will be used as the argument for the function
- * @param  {Function} fn - will be called with array values as aruments
- * @return {Promise} - which will resolve after the sequence
- */
 function sequence(collection, fn) {
   var chain = Promise.resolve();
   var values = [];
@@ -241,12 +200,6 @@ function sequence(collection, fn) {
   });
 }
 
-/**
- * waiting x frames before the Promise will resolve
- * @param  {Number} frame - the number of frames the Promise waits before resolving
- * @param  {...} args - optional values that would be the params of the Promises resolve
- * @return {Promise} - which will resolve after the waiting frames
- */
 function wait() {
   for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     args[_key - 1] = arguments[_key];
@@ -267,12 +220,6 @@ function wait() {
   });
 }
 
-/**
- * create a throttled animationframe loop that calls a function (callback) in every specified
- * @param  {Function} cb - gets called in every specified frame
- * @param  {Number} frames - throttle in wich interval cb is called
- * @return {Function} - a function which cancels the initialed loop by calling it
- */
 function throttle(cb) {
   var frames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
@@ -297,12 +244,6 @@ function throttle(cb) {
   };
 }
 
-/**
- * until fn returns a truthy value do not resolve.
- * @param  {Function} fn - a function that will be called every frame to check for changes
- * @param  {...} args - optional values that would be the params of the Promises resolve
- * @return {Promise} - which will resolve after the waiting frames
- */
 function until(fn) {
   for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     args[_key - 1] = arguments[_key];
@@ -317,12 +258,6 @@ function until(fn) {
   });
 }
 
-/**
- * resolve when fn returns a truthy value.
- * @param  {Function} fn - a function that will be called every frame to check for changes
- * @param  {...} args - optional values that would be the params of the Promises resolve
- * @return {Promise} - which will resolve after the waiting frames
- */
 function when(fn) {
   for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     args[_key - 1] = arguments[_key];
@@ -352,8 +287,4 @@ exports.wait = wait;
 exports.throttle = throttle;
 exports.until = until;
 exports.when = when;
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
 //# sourceMappingURL=nextframe.js.map
