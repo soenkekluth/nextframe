@@ -1,15 +1,16 @@
 {
-  "presets": [
-    [
-      "es2015", {
-        "modules": false,
-        "loose": true
-      }
+    "presets": [
+        [
+            "env",
+            {
+                "modules": false,
+                "targets": {
+                    "browsers": [
+                        "last 2 versions",
+                        "ie >= 9"
+                    ]
+                }
+            }
+        ]
     ]
-  ],
-  "plugins": [
-    "external-helpers",
-    "transform-es2015-parameters",
-    "transform-object-rest-spread"
-  ]
 }

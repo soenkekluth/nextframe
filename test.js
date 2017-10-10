@@ -1,34 +1,32 @@
 import test from 'ava';
 import now from 'performance-now';
 
-import nextFrame, { loop, delay, when, until, sequence, wait, throttle } from './lib/nextframe';
+import nextFrame, { loop, delay, when, until, sequence, wait, throttle } from './dist/nextframe';
 
-test('call next frame with argument', async t => {
+test('call next frame with argument', async (t) => {
   const value = await nextFrame('check');
   t.is(value, 'check');
 });
 
-test('resolve when fn returns a truthy value.', async t => {
-
-	let x = 0;
-	wait(10).then(()=> x = 1);
+test('resolve when fn returns a truthy value.', async (t) => {
+  let x = 0;
+  wait(10).then(() => { x = 1; });
 
   const value = await when(() => x >= 1);
   t.is(value, true);
 });
 
 
-test('until fn returns a truthy value do not resolve.', async t => {
-
-	let x = 0;
-	wait(10).then(()=> x = 1);
+test('until fn returns a truthy value do not resolve.', async (t) => {
+  let x = 0;
+  wait(10).then(() => { x = 1; });
 
   const value = await until(() => x >= 1);
   t.is(value, false);
 });
 
 
-test('delay 1s with args', async t => {
+test('delay 1s with args', async (t) => {
   const start = now();
   const value = await delay(1000, 'check');
   const duration = now() - start;
@@ -36,15 +34,15 @@ test('delay 1s with args', async t => {
   t.truthy(duration >= 1000 && duration <= 1100);
 });
 
-test('sequence', async t => {
+test('sequence', async (t) => {
   const values = [1, 2, 3, 4];
-  const increment = val => ++val;
+  const increment = val => val + 1;
   const result = await sequence(values, increment);
   t.deepEqual(result, [2, 3, 4, 5]);
 });
 
-test('loop', async t => {
-  const p = new Promise(resolve => {
+test('loop', async (t) => {
+  const p = new Promise((resolve) => {
     let i = 0;
     const cancel = loop(() => {
       ++i;
@@ -52,13 +50,13 @@ test('loop', async t => {
         cancel();
         resolve(20);
       }
-    })
-  })
+    });
+  });
   const result = await p;
   t.is(result, 20);
 });
 
-test('wait 50 frames', async t => {
+test('wait 50 frames', async (t) => {
   let i = 0;
   const cancel = loop(() => ++i);
 
@@ -69,18 +67,18 @@ test('wait 50 frames', async t => {
   t.is(i, 50);
 });
 
-test('throttle frames', async t => {
+test('throttle frames', async (t) => {
   let i = 0;
   let throttleCount = 0;
 
-  const p = new Promise(resolve => {
+  const p = new Promise((resolve) => {
     const cancel = loop(() => ++i);
 
     const cancelThrottle = throttle(() => {
       if (++throttleCount >= 10) {
         cancelThrottle();
         cancel();
-        resolve(throttleCount)
+        resolve(throttleCount);
       }
     }, 10);
   });

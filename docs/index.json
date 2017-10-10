@@ -1,0 +1,1076 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/delay.js",
+    "content": "import raf from 'raf';\n\n/**\n * delays the call to nextFrame with setTimeout\n * @param  {Number} ms - delay in ms\n * @param  {...} args - optional values that would be the params of the Promises resolve\n * @return {Promise} - which will resolve after the delayed animationframe\n */\nexport default function delay(ms = 0, ...args) {\n  return new Promise(resolve => setTimeout(() => {\n    raf(() => resolve(...args));\n  }, ms));\n}\n",
+    "static": true,
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/src/delay.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "function",
+    "name": "delay",
+    "memberof": "src/delay.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/delay.js~delay",
+    "access": "public",
+    "export": true,
+    "importPath": "nextframe/src/delay.js",
+    "importStyle": "delay",
+    "description": "delays the call to nextFrame with setTimeout",
+    "lineNumber": 9,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ms",
+        "description": "delay in ms"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "..."
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "args",
+        "description": "optional values that would be the params of the Promises resolve"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "which will resolve after the delayed animationframe"
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
+    "name": "src/frame.js",
+    "content": "import raf from 'raf';\n\n/**\n * create a Promise that resolves in the next Animationframe\n * @param  {...} args - optional values that would be the params of the Promises resolve\n * @return {Promise} - which will resolve in the next Animationframe\n */\nexport default function frame(...args) {\n  return new Promise(resolve => raf(() => resolve(...args)));\n}\n",
+    "static": true,
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/src/frame.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 51,
+    "kind": "function",
+    "name": "frame",
+    "memberof": "src/frame.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/frame.js~frame",
+    "access": "public",
+    "export": true,
+    "importPath": "nextframe/src/frame.js",
+    "importStyle": "frame",
+    "description": "create a Promise that resolves in the next Animationframe",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "..."
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "args",
+        "description": "optional values that would be the params of the Promises resolve"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "which will resolve in the next Animationframe"
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "import frame from './frame';\n\nexport { default as delay } from './delay';\nexport { default as loop } from './loop';\nexport { default as nextFrame } from './nextframe';\nexport { default as frame } from './frame';\nexport { default as sequence } from './sequence';\nexport { default as wait } from './wait';\nexport { default as throttle } from './throttle';\nexport { default as until } from './until';\nexport { default as when } from './when';\n\nexport default frame;\n\n// \"test\": \"jest --config config.json\",\n// \"test-ci\": \"jest --config config.json --coverage\",\n// \"prepublish\": \"npm run build\"\n//\n",
+    "static": true,
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 53,
+    "kind": "file",
+    "name": "src/loop.js",
+    "content": "import raf from 'raf';\n\n/**\n * create an animationframe loop that calls a function (callback) in every frame\n * @param  {Function} cb - gets called in every frame - for rendering mostly\n * @return {Function} - a function which cancels the initialed loop by calling it\n */\nexport default function loop(cb) {\n  if (typeof cb !== 'function') {\n    throw new Error('callback needs to be a function');\n  }\n  let f = true;\n  const frame = () => {\n    if (f) {\n      cb();\n      raf(frame);\n    }\n  };\n\n  raf(frame);\n  return () => {\n    f = false;\n  };\n}\n\n",
+    "static": true,
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/src/loop.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 54,
+    "kind": "function",
+    "name": "loop",
+    "memberof": "src/loop.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/loop.js~loop",
+    "access": "public",
+    "export": true,
+    "importPath": "nextframe/src/loop.js",
+    "importStyle": "loop",
+    "description": "create an animationframe loop that calls a function (callback) in every frame",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "cb",
+        "description": "gets called in every frame - for rendering mostly"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "a function which cancels the initialed loop by calling it"
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "file",
+    "name": "src/nextframe.js",
+    "content": "import raf from 'raf';\n\n/**\n * create a Promise that resolves in the next Animationframe\n * @param  {...} args - optional values that would be the params of the Promises resolve\n * @return {Promise} - which will resolve in the next Animationframe\n */\nexport default function nextFrame(...args) {\n  return new Promise(resolve => raf(() => resolve(...args)));\n}\n",
+    "static": true,
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/src/nextframe.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 56,
+    "kind": "function",
+    "name": "nextFrame",
+    "memberof": "src/nextframe.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/nextframe.js~nextFrame",
+    "access": "public",
+    "export": true,
+    "importPath": "nextframe/src/nextframe.js",
+    "importStyle": "nextFrame",
+    "description": "create a Promise that resolves in the next Animationframe",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "..."
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "args",
+        "description": "optional values that would be the params of the Promises resolve"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "which will resolve in the next Animationframe"
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "file",
+    "name": "src/sequence.js",
+    "content": "import nextFrame from './nextframe';\n/**\n * call a function sequencely every next frame on every iterating position of an array\n * @param  {Array} collection - keeps all values that will be used as the argument for the function\n * @param  {Function} fn - will be called with array values as aruments\n * @return {Promise} - which will resolve after the sequence\n */\nexport default function sequence(collection, fn) {\n  let chain = Promise.resolve();\n  const values = [];\n  collection.forEach((item) => {\n    chain = chain\n      .then(() => nextFrame()\n        .then(() => values.push(fn(item))));\n  });\n  return chain.then(() => values);\n}\n",
+    "static": true,
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/src/sequence.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 58,
+    "kind": "function",
+    "name": "sequence",
+    "memberof": "src/sequence.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/sequence.js~sequence",
+    "access": "public",
+    "export": true,
+    "importPath": "nextframe/src/sequence.js",
+    "importStyle": "sequence",
+    "description": "call a function sequencely every next frame on every iterating position of an array",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "collection",
+        "description": "keeps all values that will be used as the argument for the function"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "will be called with array values as aruments"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "which will resolve after the sequence"
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "name": "src/throttle.js",
+    "content": "import raf from 'raf';\n/**\n * create a throttled animationframe loop that calls a function (callback) in every specified\n * @param  {Function} cb - gets called in every specified frame\n * @param  {Number} frames - throttle in wich interval cb is called\n * @return {Function} - a function which cancels the initialed loop by calling it\n */\nexport default function throttle(cb, frames = 1) {\n  if (typeof cb !== 'function') {\n    throw new Error('callback needs to be a function');\n  }\n  let f = true;\n  let i = 0;\n\n  const frame = () => {\n    i += 1;\n    if (f) {\n      if (frames && (i % frames === 0)) {\n        cb();\n      }\n      raf(frame);\n    }\n  };\n  raf(frame);\n  return () => {\n    f = false;\n  };\n}\n\n",
+    "static": true,
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/src/throttle.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 60,
+    "kind": "function",
+    "name": "throttle",
+    "memberof": "src/throttle.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/throttle.js~throttle",
+    "access": "public",
+    "export": true,
+    "importPath": "nextframe/src/throttle.js",
+    "importStyle": "throttle",
+    "description": "create a throttled animationframe loop that calls a function (callback) in every specified",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "cb",
+        "description": "gets called in every specified frame"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "frames",
+        "description": "throttle in wich interval cb is called"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "a function which cancels the initialed loop by calling it"
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "file",
+    "name": "src/until.js",
+    "content": "import frame from './frame';\n\n/**\n * until fn returns a truthy value do not resolve.\n * @param  {Function} fn - a function that will be called every frame to check for changes\n * @param  {...} args - optional values that would be the params of the Promises resolve\n * @return {Promise} - which will resolve after the waiting frames\n */\nexport default function until(fn, ...args) {\n  return frame()\n    .then(() => {\n      const result = fn(...args);\n      if (result) {\n        return until(fn, ...args);\n      }\n      return (args && (args.length > 1)) ? args : result;\n    });\n}\n",
+    "static": true,
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/src/until.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 62,
+    "kind": "function",
+    "name": "until",
+    "memberof": "src/until.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/until.js~until",
+    "access": "public",
+    "export": true,
+    "importPath": "nextframe/src/until.js",
+    "importStyle": "until",
+    "description": "until fn returns a truthy value do not resolve.",
+    "lineNumber": 9,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "a function that will be called every frame to check for changes"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "..."
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "args",
+        "description": "optional values that would be the params of the Promises resolve"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "which will resolve after the waiting frames"
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "file",
+    "name": "src/wait.js",
+    "content": "import raf from 'raf';\n\n/**\n * waiting x frames before the Promise will resolve\n * @param  {Number} frame - the number of frames the Promise waits before resolving\n * @param  {...} args - optional values that would be the params of the Promises resolve\n * @return {Promise} - which will resolve after the waiting frames\n */\nexport default function wait(frame = 1, ...args) {\n  return new Promise((resolve) => {\n    let i = 0;\n    const count = () => {\n      if (++i >= frame) {\n        resolve(frame, ...args);\n        return;\n      }\n      raf(count);\n    };\n    raf(count);\n  });\n}\n",
+    "static": true,
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/src/wait.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 64,
+    "kind": "function",
+    "name": "wait",
+    "memberof": "src/wait.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/wait.js~wait",
+    "access": "public",
+    "export": true,
+    "importPath": "nextframe/src/wait.js",
+    "importStyle": "wait",
+    "description": "waiting x frames before the Promise will resolve",
+    "lineNumber": 9,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "frame",
+        "description": "the number of frames the Promise waits before resolving"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "..."
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "args",
+        "description": "optional values that would be the params of the Promises resolve"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "which will resolve after the waiting frames"
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "file",
+    "name": "src/when.js",
+    "content": "import frame from './frame';\n\n/**\n * resolve when fn returns a truthy value.\n * @param  {Function} fn - a function that will be called every frame to check for changes\n * @param  {...} args - optional values that would be the params of the Promises resolve\n * @return {Promise} - which will resolve after the waiting frames\n */\nexport default function when(fn, ...args) {\n  return frame()\n    .then(() => {\n      const result = fn(...args);\n      if (result) {\n        return (args && (args.length > 1)) ? args : result;\n      }\n      return when(fn, ...args);\n    });\n}\n",
+    "static": true,
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/src/when.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 66,
+    "kind": "function",
+    "name": "when",
+    "memberof": "src/when.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/when.js~when",
+    "access": "public",
+    "export": true,
+    "importPath": "nextframe/src/when.js",
+    "importStyle": "when",
+    "description": "resolve when fn returns a truthy value.",
+    "lineNumber": 9,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "a function that will be called every frame to check for changes"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "..."
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "args",
+        "description": "optional values that would be the params of the Promises resolve"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "which will resolve after the waiting frames"
+    }
+  },
+  {
+    "kind": "index",
+    "content": "[![Build Status](https://travis-ci.org/soenkekluth/nextframe.svg?branch=master)](https://travis-ci.org/soenkekluth/nextframe)\n\n# nextframe\nPromise for requestAnimationFrame / plus features like nextFrames, frameSequence, delay, throttleFrames, waitFrames\n\n## overview\n\n### nextFrame\ncreate a Promise that resolves in the next Animationframe\n@param  {...} args - optional values that would be the params of the Promises resolve\n@return {Promise} which will resolve in the next Animationframe\n\n\n### wait / alias waitFrames\nwaiting x frames before the Promise will resolve\n@param  {Number}    frame - the number of frames the Promise waits before resolving\n@param  {...} args   - optional values that would be the params of the Promises resolve\n@return {Promise} which will resolve after the waiting frames\n\n\n\n### when\nresolve when fn returns a truthy value.\n@param  {Function}  fn   a function that will be called every frame to check for changes\n@param  {...[type]} args   - optional values that would be the params of the Promises resolve\n@return {Promise} which will resolve after the waiting frames\n\n\n\n### until\nuntil fn returns a truthy value do not resolve.\n@param  {Function}  fn   a function that will be called every frame to check for changes\n@param  {...[type]} args   - optional values that would be the params of the Promises resolve\n@return {Promise} which will resolve after the waiting frames\n\n\n\n### loop\ncreate an animationframe loop that calls a function (callback) in every frame\n@param  {Function} cb - gets called in every frame - for rendering mostly\n@return {Function}  a function which cancels the initialed loop by calling it\n\n\n\n### throttle / alias throttleFrames\ncreate a throttled animationframe loop that calls a function (callback) in every specified\n@param  {Function} cb        gets called in every specified frame\n@param  {Number}   throttle in wich interval cb is called\n@return {Function}  a function which cancels the initialed loop by calling it\n\n\n\n### delay\ndelays the call to nextFrame with setTimeout\n@param  {Number}    ms    delay in ms\n@param  {...} args   - optional values that would be the params of the Promises resolve\n@return {Promise} which will resolve after the delayed animationframe\n\n\n\n### sequence\ncall a function sequencely every next frame on every iterating position of an array\n@param  {Array}   collection keeps all values that will be used as the argument for the function\n@param  {Function} fn         will be called with array values as aruments\n@return {Promise} which will resolve after the sequence\n\n\n## usage\n```js\nimport { nextFrame, loop, sequence, delay, throttleFrames, waitFrames } from 'nextframe';\n\n\nconst now = require('performance-now');\nconst increment = val => ++val;\n\nconst sequenceValues = [1, 2, 3, 4];\nlet frameCount = 0;\nlet throttleCount = 0;\n\nconst start = now();\n\n/****************************\n\t\tnextFrame / frame\n****************************/\nnextFrame()\n\t.then(() => {\n\t\tconsole.log('next frame');\n\t})\n\n/****************************\n\t\tdelay\n****************************/\ndelay(1000).then(() => {\n\tconsole.log('delayed ' + (now() - start) + 'ms');\n});\n\n/****************************\n\t\tsequence / frameSequence\n****************************/\nsequence(sequenceValues, increment)\n\t.then(result => console.log(result));\n\n/****************************\n\t\tloop / nextFrames / onEnterFrame\n****************************/\nconst cancelLoop = loop(() => {\n\tconsole.log('frame', ++frameCount);\n\tif (frameCount >= 100) {\n\t\tcancelLoop();\n\t}\n});\n\n/****************************\n\t\tthrottleFrames / throttle\n****************************/\nconst cancelThrottle = throttleFrames(() => {\n\tconsole.log('throttle', ++throttleCount);\n\tif (throttleCount >= 10) {\n\t\tcancelThrottle();\n\t}\n}, 10);\n\n/****************************\n\t\twaitFrames / wait\n****************************/\nwaitFrames(50).then((count) => {\n\tconsole.log(count + ' frames waited');\n})\n\n\n```\n\n\n## tests\n(*passing*)\n\n```js\nimport test from 'ava';\nimport now from 'performance-now';\n\nimport nextFrame, { nextFrames, delay, sequence, waitFrames, throttleFrames } from './lib';\n\ntest('call next frame with argument', async t => {\n\tconst value = await nextFrame('check');\n\tt.is(value, 'check');\n});\n\ntest('delay 1s', async t => {\n\tconst start = now();\n\tconst value = await delay(1000, 'check');\n\tconst duration = now() - start;\n\tt.is(value, 'check');\n\tt.truthy(duration >= 1000 && duration <= 1100);\n});\n\ntest('sequence', async t => {\n\tconst values = [1, 2, 3, 4];\n\tconst increment = val => ++val;\n\tconst result = await sequence(values, increment);\n\tt.deepEqual(result, [2, 3, 4, 5]);\n});\n\ntest('nextFrames loop', async t => {\n\tconst p = new Promise(resolve => {\n\t\tlet i = 0;\n\t\tconst cancel = nextFrames(() => {\n\t\t\t++i;\n\t\t\tif (i >= 20) {\n\t\t\t\tcancel();\n\t\t\t\tresolve(20);\n\t\t\t}\n\t\t})\n\t})\n\tconst result = await p;\n\tt.is(result, 20);\n});\n\ntest('wait 50 frames', async t => {\n\tlet i = 0;\n\tconst cancel = nextFrames(() => ++i);\n\n\tconst result = await waitFrames(50);\n\n\tcancel();\n\tt.is(result, 50);\n\tt.is(i, 50);\n});\n\ntest('throttle frames', async t => {\n\tlet i = 0;\n\tlet throttleCount = 0;\n\n\tconst p = new Promise(resolve => {\n\t\tconst cancel = nextFrames(() => ++i);\n\n\t\tconst cancelThrottle = throttleFrames(() => {\n\t\t\tif (++throttleCount >= 10) {\n\t\t\t\tcancelThrottle();\n\t\t\t\tcancel();\n\t\t\t\tresolve(throttleCount)\n\t\t\t}\n\t\t}, 10);\n\t});\n\tconst result = await p;\n\tt.is(result, 10);\n\tt.is(i, 100);\n});\n```\n",
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"nextframe\",\n  \"version\": \"1.7.1\",\n  \"description\": \"Promise for requestAnimationFrame, plus delayed and sequenced frames\",\n  \"main\": \"dist/nextframe.common.js\",\n  \"module\": \"dist/nextframe.es.js\",\n  \"browser\": \"dist/nextframe.js\",\n  \"jsnext:main\": \"dist/nextframe.es.js\",\n  \"scripts\": {\n    \"bump\": \"standard-version\",\n    \"docs\": \"esdoc -c esdoc.json\",\n    \"lint\": \"eslint --fix --format table ./src\",\n    \"rollup\": \"rollup -c\",\n    \"clear\": \"rimraf dist\",\n    \"build\": \"cross-env NODE_ENV=production npm-run-all clear rollup minify:* docs size\",\n    \"deploy\": \"gh-pages -d ./docs\",\n    \"watch\": \"rollup -c -w -m\",\n    \"minify:cjs\": \"uglifyjs $npm_package_main -cm toplevel -o $npm_package_main -p relative --in-source-map ${npm_package_main}.map --source-map ${npm_package_main}.map\",\n    \"--minify:umd\": \"uglifyjs dist/nextframe.common.js -cm -o dist/nextframe.common.js -p relative --in-source-map dist/nextframe.common.js.map --source-map dist/nextframe.common.js.map\",\n    \"size\": \"echo \\\"Gzipped Size: $(strip-json-comments --no-whitespace dist/nextframe.js | gzip-size)\\\"\",\n    \"release\": \"yarn run build -s && yarn run bump && git push --follow-tags origin master && npm publish\",\n    \"test\": \"yarn build && ava -v\"\n  },\n  \"files\": [\n    \"dist\",\n    \"lib\",\n    \"src\"\n  ],\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/soenkekluth/nextframe.git\"\n  },\n  \"keywords\": [\n    \"requestAnimationFrame\",\n    \"Promise\",\n    \"resolve\",\n    \"delay\",\n    \"frame\",\n    \"next frame\",\n    \"sequence\",\n    \"performance\",\n    \"jank\",\n    \"jankfree\",\n    \"jank free\",\n    \"animation\"\n  ],\n  \"author\": \"Sönke Kluth <soenke.kluth@gmail.com> (http://soenkekluth.com/)\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/soenkekluth/nextframe/issues\"\n  },\n  \"homepage\": \"https://github.com/soenkekluth/nextframe#readme\",\n  \"dependencies\": {\n    \"esdoc\": \"^1.0.3\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"raf\": \"^3.4.0\",\n    \"setimmediate\": \"^1.0.5\"\n  },\n  \"peerDependencies\": {\n    \"raf\": \"3.4.0\"\n  },\n  \"devDependencies\": {\n    \"ava\": \"^0.22.0\",\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-core\": \"^6.26.0\",\n    \"babel-plugin-external-helpers\": \"^6.22.0\",\n    \"babel-plugin-transform-es2015-destructuring\": \"6.23.0\",\n    \"babel-plugin-transform-es2015-modules-commonjs\": \"^6.26.0\",\n    \"babel-plugin-transform-es2015-parameters\": \"6.24.1\",\n    \"babel-plugin-transform-object-rest-spread\": \"6.26.0\",\n    \"babel-plugin-transform-proto-to-assign\": \"6.26.0\",\n    \"babel-preset-env\": \"^1.6.0\",\n    \"babel-preset-es2015\": \"^6.24.1\",\n    \"cross-env\": \"^5.0.5\",\n    \"documentation\": \"^5.3.2\",\n    \"eslint\": \"^4.8.0\",\n    \"eslint-config-airbnb-base\": \"^12.0.2\",\n    \"eslint-plugin-import\": \"^2.7.0\",\n    \"gh-pages\": \"^1.0.0\",\n    \"gzip-size-cli\": \"^2.1.0\",\n    \"livereload\": \"^0.6.2\",\n    \"npm-run-all\": \"^4.1.1\",\n    \"performance-now\": \"^2.1.0\",\n    \"pretty-bytes-cli\": \"^2.0.0\",\n    \"rimraf\": \"^2.6.2\",\n    \"rollup\": \"^0.50.0\",\n    \"rollup-plugin-babel\": \"^3.0.2\",\n    \"rollup-plugin-buble\": \"^0.16.0\",\n    \"rollup-plugin-commonjs\": \"^8.2.1\",\n    \"rollup-plugin-eslint\": \"^4.0.0\",\n    \"rollup-plugin-memory\": \"^2.0.0\",\n    \"rollup-plugin-node-resolve\": \"^3.0.0\",\n    \"rollup-plugin-replace\": \"^2.0.0\",\n    \"rollup-plugin-uglify\": \"^2.0.1\",\n    \"rollup-watch\": \"^4.3.1\",\n    \"serve\": \"^6.2.0\",\n    \"standard-version\": \"^4.2.0\",\n    \"strip-json-comments-cli\": \"^1.0.1\"\n  }\n}\n",
+    "longname": "/Users/soenke/Developer/Workspaces/Github/nextframe/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

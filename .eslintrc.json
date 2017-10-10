@@ -1,0 +1,34 @@
+{
+    "extends": "airbnb-base",
+    "env": {
+        "node": true,
+        "browser": true,
+        "es6": true
+    },
+    "globals": {
+        "expect": true
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-console": "off",
+        "no-plusplus": "off",
+        "indent": [
+            "error",
+            2
+        ],
+        "semi": [
+            2,
+            "always"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ]
+    }
+}
