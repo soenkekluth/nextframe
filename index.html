@@ -42,39 +42,20 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><p><a href="https://travis-ci.org/soenkekluth/nextframe"><img src="https://travis-ci.org/soenkekluth/nextframe.svg?branch=master" alt="Build Status"></a></p>
-<h1 id="nextframe">nextframe</h1><p>Promise for requestAnimationFrame / plus features like nextFrames, frameSequence, delay, throttleFrames, waitFrames</p>
-<h2 id="overview">overview</h2><h3 id="nextframe">nextFrame</h3><p>create a Promise that resolves in the next Animationframe
-@param  {...} args - optional values that would be the params of the Promises resolve
-@return {Promise} which will resolve in the next Animationframe</p>
-<h3 id="wait---alias-waitframes">wait / alias waitFrames</h3><p>waiting x frames before the Promise will resolve
-@param  {Number}    frame - the number of frames the Promise waits before resolving
-@param  {...} args   - optional values that would be the params of the Promises resolve
-@return {Promise} which will resolve after the waiting frames</p>
-<h3 id="when">when</h3><p>resolve when fn returns a truthy value.
-@param  {Function}  fn   a function that will be called every frame to check for changes
-@param  {...[type]} args   - optional values that would be the params of the Promises resolve
-@return {Promise} which will resolve after the waiting frames</p>
-<h3 id="until">until</h3><p>until fn returns a truthy value do not resolve.
-@param  {Function}  fn   a function that will be called every frame to check for changes
-@param  {...[type]} args   - optional values that would be the params of the Promises resolve
-@return {Promise} which will resolve after the waiting frames</p>
-<h3 id="loop">loop</h3><p>create an animationframe loop that calls a function (callback) in every frame
-@param  {Function} cb - gets called in every frame - for rendering mostly
-@return {Function}  a function which cancels the initialed loop by calling it</p>
-<h3 id="throttle---alias-throttleframes">throttle / alias throttleFrames</h3><p>create a throttled animationframe loop that calls a function (callback) in every specified
-@param  {Function} cb        gets called in every specified frame
-@param  {Number}   throttle in wich interval cb is called
-@return {Function}  a function which cancels the initialed loop by calling it</p>
-<h3 id="delay">delay</h3><p>delays the call to nextFrame with setTimeout
-@param  {Number}    ms    delay in ms
-@param  {...} args   - optional values that would be the params of the Promises resolve
-@return {Promise} which will resolve after the delayed animationframe</p>
-<h3 id="sequence">sequence</h3><p>call a function sequencely every next frame on every iterating position of an array
-@param  {Array}   collection keeps all values that will be used as the argument for the function
-@param  {Function} fn         will be called with array values as aruments
-@return {Promise} which will resolve after the sequence</p>
-<h2 id="usage">usage</h2><pre><code class="lang-js"><code class="source-code prettyprint">import { nextFrame, loop, sequence, delay, throttleFrames, waitFrames } from &apos;nextframe&apos;;
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="nextframe">nextframe</h1><p><a href="https://travis-ci.org/soenkekluth/nextframe"><img src="https://travis-ci.org/soenkekluth/nextframe.svg?branch=master" alt="Build Status"></a></p>
+<blockquote>
+<p>Promise for requestAnimationFrame plus nextFrames, sequence, delay, throttleFrames, waitFrames</p>
+</blockquote>
+<p>Read the docs <a href="https://soenkekluth.github.io/nextframe">https://soenkekluth.github.io/nextframe</a></p>
+<h2 id="table-of-contents">Table of Contents</h2><ul>
+<li><a href="#install">Install</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#maintainers">Maintainers</a></li>
+<li><a href="#contribute">Contribute</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id="install">Install</h2><pre><code><code class="source-code prettyprint">npm i --save nextframe</code>
+</code></pre><h2 id="usage">Usage</h2><pre><code class="lang-js"><code class="source-code prettyprint">import { nextFrame, loop, sequence, delay, throttleFrames, waitFrames } from &apos;nextframe&apos;;
 
 
 const now = require(&apos;performance-now&apos;);
@@ -134,78 +115,40 @@ waitFrames(50).then((count) =&gt; {
     console.log(count + &apos; frames waited&apos;);
 })</code>
 </code></pre>
-<h2 id="tests">tests</h2><p>(<em>passing</em>)</p>
-<pre><code class="lang-js"><code class="source-code prettyprint">import test from &apos;ava&apos;;
-import now from &apos;performance-now&apos;;
-
-import nextFrame, { nextFrames, delay, sequence, waitFrames, throttleFrames } from &apos;./lib&apos;;
-
-test(&apos;call next frame with argument&apos;, async t =&gt; {
-    const value = await nextFrame(&apos;check&apos;);
-    t.is(value, &apos;check&apos;);
-});
-
-test(&apos;delay 1s&apos;, async t =&gt; {
-    const start = now();
-    const value = await delay(1000, &apos;check&apos;);
-    const duration = now() - start;
-    t.is(value, &apos;check&apos;);
-    t.truthy(duration &gt;= 1000 &amp;&amp; duration &lt;= 1100);
-});
-
-test(&apos;sequence&apos;, async t =&gt; {
-    const values = [1, 2, 3, 4];
-    const increment = val =&gt; ++val;
-    const result = await sequence(values, increment);
-    t.deepEqual(result, [2, 3, 4, 5]);
-});
-
-test(&apos;nextFrames loop&apos;, async t =&gt; {
-    const p = new Promise(resolve =&gt; {
-        let i = 0;
-        const cancel = nextFrames(() =&gt; {
-            ++i;
-            if (i &gt;= 20) {
-                cancel();
-                resolve(20);
-            }
-        })
-    })
-    const result = await p;
-    t.is(result, 20);
-});
-
-test(&apos;wait 50 frames&apos;, async t =&gt; {
-    let i = 0;
-    const cancel = nextFrames(() =&gt; ++i);
-
-    const result = await waitFrames(50);
-
-    cancel();
-    t.is(result, 50);
-    t.is(i, 50);
-});
-
-test(&apos;throttle frames&apos;, async t =&gt; {
-    let i = 0;
-    let throttleCount = 0;
-
-    const p = new Promise(resolve =&gt; {
-        const cancel = nextFrames(() =&gt; ++i);
-
-        const cancelThrottle = throttleFrames(() =&gt; {
-            if (++throttleCount &gt;= 10) {
-                cancelThrottle();
-                cancel();
-                resolve(throttleCount)
-            }
-        }, 10);
-    });
-    const result = await p;
-    t.is(result, 10);
-    t.is(i, 100);
-});</code>
-</code></pre>
+<h2 id="maintainers">Maintainers</h2><p><a href="https://github.com/soenkekluth">@soenkekluth</a></p>
+<h2 id="contribute">Contribute</h2><p>PRs accepted.</p>
+<p>Small note: If editing the README, please conform to the <a href="https://github.com/RichardLitt/standard-readme">standard-readme</a> specification.</p>
+<h2 id="license">License</h2><p>MIT &#xA9; 2017 S&#xF6;nke Kluth</p>
+<h2 id="overview">Overview</h2><h3 id="nextframe">nextFrame</h3><p>create a Promise that resolves in the next Animationframe
+@param  {...} args - optional values that would be the params of the Promises resolve
+@return {Promise} which will resolve in the next Animationframe</p>
+<h3 id="wait---alias-waitframes">wait / alias waitFrames</h3><p>waiting x frames before the Promise will resolve
+@param  {Number}    frame - the number of frames the Promise waits before resolving
+@param  {...} args   - optional values that would be the params of the Promises resolve
+@return {Promise} which will resolve after the waiting frames</p>
+<h3 id="when">when</h3><p>resolve when fn returns a truthy value.
+@param  {Function}  fn   a function that will be called every frame to check for changes
+@param  {...[type]} args   - optional values that would be the params of the Promises resolve
+@return {Promise} which will resolve after the waiting frames</p>
+<h3 id="until">until</h3><p>until fn returns a truthy value do not resolve.
+@param  {Function}  fn   a function that will be called every frame to check for changes
+@param  {...[type]} args   - optional values that would be the params of the Promises resolve
+@return {Promise} which will resolve after the waiting frames</p>
+<h3 id="loop">loop</h3><p>create an animationframe loop that calls a function (callback) in every frame
+@param  {Function} cb - gets called in every frame - for rendering mostly
+@return {Function}  a function which cancels the initialed loop by calling it</p>
+<h3 id="throttle---alias-throttleframes">throttle / alias throttleFrames</h3><p>create a throttled animationframe loop that calls a function (callback) in every specified
+@param  {Function} cb        gets called in every specified frame
+@param  {Number}   throttle in wich interval cb is called
+@return {Function}  a function which cancels the initialed loop by calling it</p>
+<h3 id="delay">delay</h3><p>delays the call to nextFrame with setTimeout
+@param  {Number}    ms    delay in ms
+@param  {...} args   - optional values that would be the params of the Promises resolve
+@return {Promise} which will resolve after the delayed animationframe</p>
+<h3 id="sequence">sequence</h3><p>call a function sequencely every next frame on every iterating position of an array
+@param  {Array}   collection keeps all values that will be used as the argument for the function
+@param  {Function} fn         will be called with array values as aruments
+@return {Promise} which will resolve after the sequence</p>
 </div>
 </div>
 
