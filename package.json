@@ -19,7 +19,9 @@
     "--minify:umd": "uglifyjs dist/nextframe.common.js -cm -o dist/nextframe.common.js -p relative --in-source-map dist/nextframe.common.js.map --source-map dist/nextframe.common.js.map",
     "size": "echo \"Gzipped Size: $(strip-json-comments --no-whitespace dist/nextframe.js | gzip-size)\"",
     "release": "yarn run build -s && yarn run bump && git push --follow-tags origin master && npm publish",
-    "test": "yarn build && ava -v"
+    "test": "yarn build && ava -v",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "dist",
@@ -54,7 +56,8 @@
     "esdoc": "^1.0.3",
     "esdoc-standard-plugin": "^1.0.0",
     "raf": "^3.4.0",
-    "setimmediate": "^1.0.5"
+    "setimmediate": "^1.0.5",
+    "snyk": "^*"
   },
   "peerDependencies": {
     "raf": "3.4.0"
@@ -96,5 +99,6 @@
     "serve": "^6.2.0",
     "standard-version": "^4.2.0",
     "strip-json-comments-cli": "^1.0.1"
-  }
+  },
+  "snyk": true
 }

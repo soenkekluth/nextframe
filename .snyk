@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.10.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:marked:20170907':
+    - esdoc > marked:
+        patched: '2018-01-24T16:26:38.614Z'
+    - esdoc-standard-plugin > esdoc-publish-html-plugin > marked:
+        patched: '2018-01-24T16:26:38.614Z'
