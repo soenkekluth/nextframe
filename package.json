@@ -63,7 +63,7 @@
     "raf": "3.4.0"
   },
   "devDependencies": {
-    "ava": "^0.22.0",
+    "ava": "^0.23.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -86,9 +86,9 @@
     "performance-now": "^2.1.0",
     "pretty-bytes-cli": "^2.0.0",
     "rimraf": "^2.6.2",
-    "rollup": "^0.50.0",
+    "rollup": "^0.51.8",
     "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-buble": "^0.16.0",
+    "rollup-plugin-buble": "^0.18.0",
     "rollup-plugin-commonjs": "^8.2.1",
     "rollup-plugin-eslint": "^4.0.0",
     "rollup-plugin-memory": "^2.0.0",
