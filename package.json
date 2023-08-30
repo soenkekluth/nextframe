@@ -20,8 +20,8 @@
     "size": "echo \"Gzipped Size: $(strip-json-comments --no-whitespace dist/nextframe.js | gzip-size)\"",
     "release": "yarn run build -s && yarn run bump && git push --follow-tags origin master && npm publish",
     "test": "yarn build && ava -v",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "snyk-protect": "snyk-protect",
+    "prepublish": "yarn run snyk-protect"
   },
   "files": [
     "dist",
@@ -57,7 +57,7 @@
     "esdoc-standard-plugin": "^1.0.0",
     "raf": "^3.4.0",
     "setimmediate": "^1.0.5",
-    "snyk": "^*"
+    "@snyk/protect": "latest"
   },
   "peerDependencies": {
     "raf": "3.4.0"
