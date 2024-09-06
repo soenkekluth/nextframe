@@ -53,7 +53,7 @@
   },
   "homepage": "https://github.com/soenkekluth/nextframe",
   "dependencies": {
-    "esdoc": "^1.0.3",
+    "esdoc": "^1.0.4",
     "esdoc-standard-plugin": "^1.0.0",
     "raf": "^3.4.0",
     "setimmediate": "^1.0.5",
